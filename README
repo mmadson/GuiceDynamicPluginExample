@@ -1,5 +1,4 @@
-After downloading the source run mvn install on the root pom.xml, then go to the PluginRunner module's target directory and run the
-created runnable jar:
+After downloading the source run mvn install on the root pom.xml, then go to the PluginRunner module's target directory and run the created runnable jar:
 
 java -jar guice-dynamic-plugin-example-runner-1.0-SNAPSHOT.jar
 
@@ -7,9 +6,8 @@ This will create a directory adjacent to the runnable jar named "plugins".
 
 Hitting the ENTER key in the console you should see the included plugin print some output to standard out.
 
-Now for the magic, copy the SamplePlugin (located in the SamplePlugin module's target directory) into the plugins
-folder next to the plugin runner executable jar, now hit ENTER in the console again and you should see the new
-plugin's output along with the included plugin's output.
+Now for the magic
 
-The really cool thing is that guice dependency injection also works for the dynamically loaded plugins, note
-how both the included and dynamic plugin, share the same singleton dependency instance.
+Copy the SamplePlugin (located in the SamplePlugin module's target directory) into the plugins folder (the one created next to the plugin runner executable jar) and hit ENTER in the console again.
+
+Uou should see the new plugin's output along with the included plugin's output. The really cool thing is that guice dependency injection also works for the dynamically loaded plugins, note how both the included and dynamic plugin, share the same singleton dependency instance.
